@@ -38,7 +38,7 @@ class Drawer extends Header {
                 {/* Account Section */}
                 <div className="drawer-section">
                     <div className="drawer-title">Account</div>
-                    <div className="drawer-link color-link" onClick={() => { toggleHome(home); this.goHome }}>Home</div>
+                    <div className="drawer-link color-link" onClick={() => { toggleHome(home); this.goHome() }}>Set Home</div>
                     <div className="drawer-link color-link" onClick={() => firebase.auth().signOut()}>Sign Out</div>
                 </div>
 
