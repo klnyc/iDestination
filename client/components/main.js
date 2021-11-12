@@ -21,7 +21,7 @@ class Main extends React.Component {
     }
 
     load() {
-        new Promise((resolve) => setTimeout(resolve, 2000))
+        new Promise((resolve) => setTimeout(resolve, 1200))
         .then(() => this.setState({ loading: false }))
     }
 

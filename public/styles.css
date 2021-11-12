@@ -631,7 +631,7 @@ body {
 .loading {
     margin: 0;
     padding: 0;
-    background: var(--theme);
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -676,8 +676,8 @@ body {
     border-radius: 50%;
     left: calc(50% - 5px);
     top: 0;
-    box-shadow: 50px 0 0 #fff, -65px -50px 0 #fff, -65px 50px 0 #fff,
-      -55px 0 0 #f07e6e, 45px 35px 0 #84cdfa, -40px -40px 0 #5ad1cd,
+    box-shadow: 50px 0 0 rgb(0, 188, 212), -65px -50px 0 palevioletred, -65px 50px 0 rgb(0, 188, 212),
+      -55px 0 0 palevioletred, 45px 35px 0 rgb(0, 188, 212), -40px -40px 0 palevioletred,
       40px -40px 0 #fff, 55px -59px 0 #fff;
     animation: animate 10s linear infinite;
   }
@@ -691,8 +691,8 @@ body {
     border-radius: 50%;
     left: calc(50% - 5px);
     bottom: 0;
-    box-shadow: -50px 0 0 #fff, 65px 50px 0 #fff, 65px -50px 0 #fff,
-      55px 0 0 #84cdfa, -45px -35px 0 #f07e6e, 40px 40px 0 #5ad1cd,
+    box-shadow: -50px 0 0 palevioletred, 65px 50px 0 rgb(0, 188, 212), 65px -50px 0 palevioletred,
+      55px 0 0 rgb(0, 188, 212), -45px -35px 0 palevioletred, 40px 40px 0 rgb(0, 188, 212),
       -40px 40px 0 #fff, -55px 59px 0 #fff;
     animation: animate 10s linear infinite;
   }
