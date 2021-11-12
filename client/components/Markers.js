@@ -1,6 +1,6 @@
-import React, { Fragment}  from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import { Marker } from "react-google-maps"
+import { Marker } from 'react-google-maps'
 import { openInfoWindow } from '../store'
 import { colors } from './Index'
 
@@ -32,7 +32,7 @@ class Markers extends React.Component {
     render() {
         const { markers, currentMarker, category, user } = this.props
         return (
-            <Fragment>
+            <>
                 {/* Render Experiences & Wishlist Markers */}
                 {(category.experiences && category.wishlist) &&
                 markers.map((marker, index) => marker.experiences
@@ -54,7 +54,7 @@ class Markers extends React.Component {
 
                 {/* Render Home Marker */}
                 {user.home && this.renderMarker(user.home, 'silver')}
-            </Fragment>
+            </>
         )
     }
 }

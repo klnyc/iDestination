@@ -19,21 +19,21 @@ const initialState = {
     weather: false
 }
 
-const SET_USER_DATA = "SET_USER_DATA"
-const SET_CENTER = "SET_CENTER"
+const SET_USER_DATA = 'SET_USER_DATA'
+const SET_CENTER = 'SET_CENTER'
 const LOG_OUT = 'LOG_OUT'
 const OPEN_LOGIN = 'OPEN_LOGIN'
 const CLOSE_LOGIN = 'CLOSE_LOGIN'
-const TOGGLE_DRAWER = "TOGGLE_DRAWER"
-const TOGGLE_LIST_EXPERIENCES = "TOGGLE_LIST_EXPERIENCES"
-const TOGGLE_LIST_WISHLIST = "TOGGLE_LIST_WISHLIST"
-const TOGGLE_OFF_FEATURES = "TOGGLE_OFF_FEATURES"
-const TOGGLE_CATEGORY_ALL = "TOGGLE_CATEGORY_ALL"
-const TOGGLE_CATEGORY_EXPERIENCES = "TOGGLE_CATEGORY_EXPERIENCES"
-const TOGGLE_CATEGORY_WISHLIST = "TOGGLE_CATEGORY_WISHLIST"
-const TOGGLE_HOME = "TOGGLE_HOME"
-const TOGGLE_WEATHER = "TOGGLE_WEATHER"
-const GO_TO_MARKER = "GO_TO_MARKER"
+const TOGGLE_DRAWER = 'TOGGLE_DRAWER'
+const TOGGLE_LIST_EXPERIENCES = 'TOGGLE_LIST_EXPERIENCES'
+const TOGGLE_LIST_WISHLIST = 'TOGGLE_LIST_WISHLIST'
+const TOGGLE_OFF_FEATURES = 'TOGGLE_OFF_FEATURES'
+const TOGGLE_CATEGORY_ALL = 'TOGGLE_CATEGORY_ALL'
+const TOGGLE_CATEGORY_EXPERIENCES = 'TOGGLE_CATEGORY_EXPERIENCES'
+const TOGGLE_CATEGORY_WISHLIST = 'TOGGLE_CATEGORY_WISHLIST'
+const TOGGLE_HOME = 'TOGGLE_HOME'
+const TOGGLE_WEATHER = 'TOGGLE_WEATHER'
+const GO_TO_MARKER = 'GO_TO_MARKER'
 const OPEN_INFO_WINDOW = 'OPEN_INFO_WINDOW'
 const CLOSE_INFO_WINDOW = 'CLOSE_INFO_WINDOW'
 const HANDLE_MAP_SEARCH_INPUT = 'HANDLE_MAP_SEARCH_INPUT'
@@ -56,11 +56,11 @@ export const toggleListWishlist = (list) => ({ type: TOGGLE_LIST_WISHLIST, list 
 export const toggleOffFeatures = () => ({ type: TOGGLE_OFF_FEATURES })
 export const toggleCategory = (category) => {
     switch(category) {
-        case "all":
+        case 'all':
             return { type: TOGGLE_CATEGORY_ALL }
-        case "experiences":
+        case 'experiences':
             return { type: TOGGLE_CATEGORY_EXPERIENCES }
-        case "wishlist":
+        case 'wishlist':
             return { type: TOGGLE_CATEGORY_WISHLIST }
         default:
             return { type: TOGGLE_CATEGORY_ALL }

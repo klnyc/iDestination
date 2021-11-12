@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { setUserData } from '../store'
 import { WEATHER_API_KEY } from '../../API_keys'
-import { FaTrash, IoIosAddCircleOutline, WiDaySunny, WiDayCloudy, WiCloud, WiCloudy, WiRainMix, WiRain, WiThunderstorm, WiSnow, WiFog } from "../icons"
+import { FaTrash, IoIosAddCircleOutline, WiDaySunny, WiDayCloudy, WiCloud, WiCloudy, WiRainMix, WiRain, WiThunderstorm, WiSnow, WiFog } from '../icons'
 
 class Weather extends React.Component {
     constructor() {
@@ -92,19 +92,19 @@ class Weather extends React.Component {
     renderWeatherCities(weatherCities) {
         const { user } = this.props
         return (
-            <Fragment>
+            <>
                 {weatherCities.map((city, index) => {
                     const weatherIcon = weatherIcons[city.weather[0].icon.slice(0, -1)]
                     return (
-                        <div key={index} className="weather-row">
-                            <div className="weather-column">{city.name}</div>
-                            <div className="weather-column">{Math.round(city.main.temp)}° {user.weather.unit === "Metric" ? "C" : "F"}</div>
-                            <div className="weather-column weather-icon">{weatherIcon}</div>
-                            <div className="weather-icon-trash"><FaTrash className="plain-link" style={{ color: 'silver' }} onClick={() => this.removeWeatherCity(city.name)} /></div>
+                        <div key={index} className='weather-row'>
+                            <div className='weather-column'>{city.name}</div>
+                            <div className='weather-column'>{Math.round(city.main.temp)}° {user.weather.unit === 'Metric' ? 'C' : 'F'}</div>
+                            <div className='weather-column weather-icon'>{weatherIcon}</div>
+                            <div className='weather-icon-trash'><FaTrash className='plain-link' style={{ color: 'silver' }} onClick={() => this.removeWeatherCity(city.name)} /></div>
                         </div>
                     )
                 })}
-            </Fragment>
+            </>
         )
     }
 
@@ -120,20 +120,20 @@ class Weather extends React.Component {
     render() {
         const { weatherCities, weatherSearchInput, error } = this.state
         return (
-            <div className="panel card">
-                <div className="panel-title">Weather</div>
-                <div className="weather-top">
-                    <div className="weather-temperature">
-                        <span className="plain-link" onClick={() => this.changeTemperatureUnit('Imperial')}>F</span>
+            <div className='panel card'>
+                <div className='panel-title'>Weather</div>
+                <div className='weather-top'>
+                    <div className='weather-temperature'>
+                        <span className='plain-link' onClick={() => this.changeTemperatureUnit('Imperial')}>F</span>
                         <span> | </span>
-                        <span className="plain-link" onClick={() => this.changeTemperatureUnit('Metric')}>C</span>
+                        <span className='plain-link' onClick={() => this.changeTemperatureUnit('Metric')}>C</span>
                     </div>
-                    <div className="weather-input">
-                        <input name="weatherSearchInput" type="text" value={weatherSearchInput} placeholder="Enter City" onChange={this.handleChange} autoComplete="off"></input>
-                        <div className="weather-icon-add"><IoIosAddCircleOutline className="plain-link" onClick={this.addWeatherCity} /></div>
+                    <div className='weather-input'>
+                        <input name='weatherSearchInput' type='text' value={weatherSearchInput} placeholder='Enter City' onChange={this.handleChange} autoComplete='off'></input>
+                        <div className='weather-icon-add'><IoIosAddCircleOutline className='plain-link' onClick={this.addWeatherCity} /></div>
                     </div>
                 </div>
-                <div className="weather-error">{error}</div>
+                <div className='weather-error'>{error}</div>
                 {this.renderWeatherCities(weatherCities)}
             </div>
         )
@@ -141,15 +141,15 @@ class Weather extends React.Component {
 }
 
 const weatherIcons = {
-    "01": <WiDaySunny />,       //Sunny
-    "02": <WiDayCloudy />,      //Few Clouds
-    "03": <WiCloud />,          //Scattered Clouds
-    "04": <WiCloudy />,         //Broken Clouds
-    "09": <WiRainMix />,        //Shower Rain
-    "10": <WiRain />,           //Rain
-    "11": <WiThunderstorm />,   //Thunderstorm
-    "13": <WiSnow />,           //Snow
-    "50": <WiFog />,            //Mist
+    '01': <WiDaySunny />,       //Sunny
+    '02': <WiDayCloudy />,      //Few Clouds
+    '03': <WiCloud />,          //Scattered Clouds
+    '04': <WiCloudy />,         //Broken Clouds
+    '09': <WiRainMix />,        //Shower Rain
+    '10': <WiRain />,           //Rain
+    '11': <WiThunderstorm />,   //Thunderstorm
+    '13': <WiSnow />,           //Snow
+    '50': <WiFog />,            //Mist
 }
 
 const mapState = (state) => ({

@@ -7,42 +7,42 @@ class Drawer extends Header {
     render() {
         const { user, category, toggleCategory, home, toggleHome, toggleWeather } = this.props
         return (
-            <div className="drawer card">
+            <div className='drawer card'>
 
                 {/* Name Section */}
-                <div className="drawer-section top">
-                    <div className="drawer-name">{user.name}</div>
-                    <div className="drawer-email">{user.email}</div>
+                <div className='drawer-section top'>
+                    <div className='drawer-name'>{user.name}</div>
+                    <div className='drawer-email'>{user.email}</div>
                 </div>
 
                 {/* Display Section */}
-                <div className="drawer-section">
-                    <div className="drawer-title">Display</div>
-                    <div className="drawer-link color-link" onClick={() => toggleCategory('all')}>
+                <div className='drawer-section'>
+                    <div className='drawer-title'>Display</div>
+                    <div className='drawer-link color-link' onClick={() => toggleCategory('all')}>
                         All{(category.experiences && category.wishlist) ? <span>●</span> : ''}
                     </div>
-                    <div className="drawer-link color-link" onClick={() => toggleCategory('experiences')}>
+                    <div className='drawer-link color-link' onClick={() => toggleCategory('experiences')}>
                         Experiences{(category.experiences && !category.wishlist) ? <span>●</span> : ''}
                     </div>
-                    <div className="drawer-link color-link" onClick={() => toggleCategory('wishlist')}>
+                    <div className='drawer-link color-link' onClick={() => toggleCategory('wishlist')}>
                         Wishlist{(!category.experiences && category.wishlist) ? <span>●</span> : ''}
                     </div>
                 </div>
 
                 {/* Features Section*/}
-                <div className="drawer-section">
-                    <div className="drawer-title">Features</div>
-                    <div className="drawer-link color-link" onClick={() => toggleWeather()}>Weather</div>
+                <div className='drawer-section'>
+                    <div className='drawer-title'>Features</div>
+                    <div className='drawer-link color-link' onClick={() => toggleWeather()}>Weather</div>
                 </div>
 
                 {/* Account Section */}
-                <div className="drawer-section">
-                    <div className="drawer-title">Account</div>
-                    <div className="drawer-link color-link" onClick={() => { toggleHome(home); this.goHome() }}>Set Home</div>
-                    <div className="drawer-link color-link" onClick={() => firebase.auth().signOut()}>Sign Out</div>
+                <div className='drawer-section'>
+                    <div className='drawer-title'>Account</div>
+                    <div className='drawer-link color-link' onClick={() => { toggleHome(home); this.goHome() }}>Set Home</div>
+                    <div className='drawer-link color-link' onClick={() => firebase.auth().signOut()}>Sign Out</div>
                 </div>
 
-                <div className="drawer-copyright">© 2020 iDestination</div>
+                <div className='drawer-copyright'>© 2020 iDestination</div>
 
             </div>
         )

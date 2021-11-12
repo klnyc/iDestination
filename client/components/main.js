@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { Header, Footer, Map, Home, Drawer, List, Weather } from './Index'
 import { login, logout } from '../store'
@@ -6,25 +6,35 @@ import { login, logout } from '../store'
 class Main extends React.Component {
     constructor() {
         super()
+        this.state = { loading: true }
+        this.load = this.load.bind(this)
         this.renderApp = this.renderApp.bind(this)
+        this.renderMap = this.renderMap.bind(this)
         this.renderHomePage = this.renderHomePage.bind(this)
+        this.renderLoadingPage = this.renderLoadingPage.bind(this)
     }
 
     componentDidMount() {
         const { login, logout } = this.props
+        this.load()
         firebase.auth().onAuthStateChanged(user => user ? login(user): logout())
     }
 
-    renderApp() {
+    load() {
+        new Promise((resolve) => setTimeout(resolve, 2000))
+        .then(() => this.setState({ loading: false }))
+    }
+
+    renderMap() {
         const { drawer, list, weather } = this.props
         return (
-            <Fragment>
+            <>
                 <Map />
                 {drawer && <Drawer />}
                 {(list.experiences || list.wishlist) && <List />}
                 {weather && <Weather />}
                 <Footer />
-            </Fragment>
+            </>
         )
     }
 
@@ -32,12 +42,27 @@ class Main extends React.Component {
         return <Home />
     }
 
-    render() {
+    renderLoadingPage() {
+        return (
+            <div className='loading'><div className='circle'><div className='dots'></div></div></div>
+        )
+    }
+
+    renderApp() {
         const { user } = this.props
         return (
-            <div id="main">
+            <>
                 <Header />
-                {user.id ? this.renderApp() : this.renderHomePage()}
+                {user.id ? this.renderMap() : this.renderHomePage()}
+            </>
+        )
+    }
+
+    render() {
+        const { loading } = this.state
+        return (
+            <div id='main'>
+                {loading ? this.renderLoadingPage() : this.renderApp()}
             </div>
         )
     }

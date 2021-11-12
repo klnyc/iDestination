@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps"
-import { SearchBox } from "react-google-maps/lib/components/places/SearchBox"
+import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps'
+import { SearchBox } from 'react-google-maps/lib/components/places/SearchBox'
 import { compose, withProps } from 'recompose'
 import { GOOGLE_MAPS_API_KEY } from '../../API_keys'
 import { IoMdCloseCircle, IoMdArrowRoundUp } from '../icons'
@@ -44,20 +44,20 @@ class Map extends React.Component {
         onClick={() => toggleOffFeatures()}>
 
         <SearchBox
-          className="container"
+          className='container'
           ref={(mapSearchBox) => mountMapSearchBox(mapSearchBox)}
           bounds={bounds}
           controlPosition={google.maps.ControlPosition.TOP_CENTER}
           onPlacesChanged={() => changePlace(mapSearchBox.getPlaces()[0])}>
-          <div id="mapSearchBox" onClick={() => { toggleOffFeatures(); clearCurrentMarker() }}>
+          <div id='mapSearchBox' onClick={() => { toggleOffFeatures(); clearCurrentMarker() }}>
             <input
-              name="mapSearchInput"
-              type="text"
-              placeholder="Enter Destination"
+              name='mapSearchInput'
+              type='text'
+              placeholder='Enter Destination'
               value={mapSearchInput}
               onChange={(event) => handleMapSearchInput(event)} />
-            <div className={mapSearchInput ? "clear-input active" : "clear-input"} onClick={clearMapSearchInput}><IoMdCloseCircle /></div>
-            {home && !mapSearchInput && <div className="set-home-popup card"><span><IoMdArrowRoundUp /></span>Enter New Home Address<span><IoMdArrowRoundUp /></span></div>}
+            <div className={mapSearchInput ? 'clear-input active' : 'clear-input'} onClick={clearMapSearchInput}><IoMdCloseCircle /></div>
+            {home && !mapSearchInput && <div className='set-home-popup card'><span><IoMdArrowRoundUp /></span>Enter New Home Address<span><IoMdArrowRoundUp /></span></div>}
           </div>
         </SearchBox>
         
@@ -73,19 +73,19 @@ const mapSettings = {
   disableDefaultUI: true,
   clickableIcons: false,
   styles: [
-    { "featureType": "all", "stylers": [{ "saturation": 0 }, { "hue": "#e7ecf0" }] },
-    { "featureType": "road", "stylers": [{ "saturation": -70 }] },
-    { "featureType": "transit", "stylers": [{ "visibility": "on" }] },
-    { "featureType": "poi", "stylers": [{ "visibility": "off" }] },
-    { "featureType": "water", "stylers": [{ "visibility": "simplified" }, { "saturation": -60 }] }
+    { 'featureType': 'all', 'stylers': [{ 'saturation': 0 }, { 'hue': '#e7ecf0' }] },
+    { 'featureType': 'road', 'stylers': [{ 'saturation': -70 }] },
+    { 'featureType': 'transit', 'stylers': [{ 'visibility': 'on' }] },
+    { 'featureType': 'poi', 'stylers': [{ 'visibility': 'off' }] },
+    { 'featureType': 'water', 'stylers': [{ 'visibility': 'simplified' }, { 'saturation': -60 }] }
   ]
 }
 
 const mapProperties = {
   googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&v=3.exp&libraries=geometry,drawing,places`,
-  loadingElement: <div className="map-google" />,
-  containerElement: <div className="map" />,
-  mapElement: <div className="map-google" />
+  loadingElement: <div className='map-google' />,
+  containerElement: <div className='map' />,
+  mapElement: <div className='map-google' />
 }
 
 const mapState = (state) => ({

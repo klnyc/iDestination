@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import { InfoWindow } from "react-google-maps"
-import { FaTrash, MdStar, GiFire } from "../icons"
+import { InfoWindow } from 'react-google-maps'
+import { FaTrash, MdStar, GiFire } from '../icons'
 import { addMarker, removeMarker, closeInfoWindow, setHome } from '../store'
 import { colors } from './Index'
 
@@ -41,10 +41,10 @@ class Window extends React.Component {
     renderInfoWindowDate() {
         const { user, infoWindow, removeMarker } = this.props
         return (
-          <div className="infoWindow-date-container">
+          <div className='infoWindow-date-container'>
             {this.renderInfoWindowIcons()}
-            <div className="infoWindow-date">{infoWindow.date}</div>
-            <div className="infoWindow-icon-trash plain-link" onClick={() => removeMarker(user.id, infoWindow)}><FaTrash style={{ color: 'silver' }} /></div>
+            <div className='infoWindow-date'>{infoWindow.date}</div>
+            <div className='infoWindow-icon-trash plain-link' onClick={() => removeMarker(user.id, infoWindow)}><FaTrash style={{ color: 'silver' }} /></div>
           </div>
         )
     }
@@ -52,21 +52,21 @@ class Window extends React.Component {
     renderDatePicker() {
         const { month, day, year , error} = this.state
         return (
-            <Fragment>
-                <div className="datepicker">
-                    <input name="month" type="number" placeholder="MM" value={month} onChange={this.handleChange} />
-                    <input name="day" type="number" placeholder="DD" value={day} onChange={this.handleChange} />
-                    <input name="year" type="number" placeholder="YYYY" value={year} onChange={this.handleChange} />
+            <>
+                <div className='datepicker'>
+                    <input name='month' type='number' placeholder='MM' value={month} onChange={this.handleChange} />
+                    <input name='day' type='number' placeholder='DD' value={day} onChange={this.handleChange} />
+                    <input name='year' type='number' placeholder='YYYY' value={year} onChange={this.handleChange} />
                 </div>
-                {error && <div className="datepicker-error">{error}</div>}
-            </Fragment>
+                {error && <div className='datepicker-error'>{error}</div>}
+            </>
         )
     }
 
     dateFocus() {
-        const month = document.querySelectorAll("input[name=month]")[0]
-        const day = document.querySelectorAll("input[name=day]")[0]
-        const year = document.querySelectorAll("input[name=year]")[0]
+        const month = document.querySelectorAll('input[name=month]')[0]
+        const day = document.querySelectorAll('input[name=day]')[0]
+        const year = document.querySelectorAll('input[name=year]')[0]
         if (month.value.length === 2) day.focus()
         if (day.value.length === 2) year.focus()
     }
@@ -87,32 +87,32 @@ class Window extends React.Component {
         const { infoWindow, markers, closeInfoWindow, home, setHome, user } = this.props;
         return (
             <InfoWindow position={infoWindow.position} onCloseClick={() => closeInfoWindow()}>
-                <div className="infoWindow">
+                <div className='infoWindow'>
 
                     {/* Location Details */}
-                    <div className="infoWindow-name">{infoWindow.name}</div>
-                    <div className="infoWindow-address">{infoWindow.street}</div>
-                    <div className="infoWindow-address">{infoWindow.location}</div>
+                    <div className='infoWindow-name'>{infoWindow.name}</div>
+                    <div className='infoWindow-address'>{infoWindow.street}</div>
+                    <div className='infoWindow-address'>{infoWindow.location}</div>
 
                     {/* New Location */}
                     {!home && (infoWindow !== user.home) && markers.indexOf(infoWindow) === -1 &&
-                    <Fragment>
+                    <>
                         {this.renderDatePicker()}
-                        {document.getElementsByClassName("datepicker")[0] && this.dateFocus()}
-                        <div className="infoWindow-button-container">
-                            <div className="infoWindow-button experiences" onClick={() => this.submitPlace('experiences')}>Add Experience</div>
-                            <div className="infoWindow-button wishlist" onClick={() => this.submitPlace('wishlist')}>Add Wish</div>
+                        {document.getElementsByClassName('datepicker')[0] && this.dateFocus()}
+                        <div className='infoWindow-button-container'>
+                            <div className='infoWindow-button experiences' onClick={() => this.submitPlace('experiences')}>Add Experience</div>
+                            <div className='infoWindow-button wishlist' onClick={() => this.submitPlace('wishlist')}>Add Wish</div>
                         </div>
-                    </Fragment>}
+                    </>}
 
                     {/* Added Location */}
                     {!home && (infoWindow !== user.home) && markers.includes(infoWindow) && this.renderInfoWindowDate()}
 
                     {/* Add Home */}
-                    {home && (infoWindow !== user.home) && <div className="infoWindow-button user-home set-home-active" onClick={() => setHome(user.id, infoWindow)}>Set Home</div>} 
+                    {home && (infoWindow !== user.home) && <div className='infoWindow-button user-home set-home-active' onClick={() => setHome(user.id, infoWindow)}>Set Home</div>} 
 
                     {/* Existing Home */} 
-                    {(infoWindow === user.home) && <div className="infoWindow-button user-home">Home</div>}     
+                    {(infoWindow === user.home) && <div className='infoWindow-button user-home'>Home</div>}     
                               
                 </div>
             </InfoWindow>

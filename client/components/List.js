@@ -12,10 +12,10 @@ class List extends React.Component {
     renderMarkerDetails(marker, index) {
         const { goToMarker, toggleOffFeatures, list } = this.props
         return (
-            <div key={index} className={"list-line color-link " + (list.experiences ? "experiences" : "wishlist")} onClick={() => { goToMarker(marker); toggleOffFeatures() }}>
-                <div className="list-column name">{marker.name}</div>
-                <div className="list-column city">{marker.city}</div>
-                <div className="list-column date">{marker.date}</div>
+            <div key={index} className={'list-line color-link ' + (list.experiences ? 'experiences' : 'wishlist')} onClick={() => { goToMarker(marker); toggleOffFeatures() }}>
+                <div className='list-column name'>{marker.name}</div>
+                <div className='list-column city'>{marker.city}</div>
+                <div className='list-column date'>{marker.date}</div>
             </div>
         )
     }
@@ -33,8 +33,8 @@ class List extends React.Component {
         const wishlist = markers.filter(marker => marker.wishlist)
         const listMarkers = list.experiences ? experiences : wishlist
         return (
-            <div className="panel card">
-                <div className="panel-title">{list.experiences ? "Experiences" : "Wishlist"}</div>
+            <div className='panel card'>
+                <div className='panel-title'>{list.experiences ? 'Experiences' : 'Wishlist'}</div>
                 {this.sortMarkers(listMarkers).map((marker, index) => this.renderMarkerDetails(marker, index))}
             </div>
         )
