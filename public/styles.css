@@ -1,8 +1,8 @@
 :root {
-    --text:ghostwhite;
-    --primary: ghostwhite;
-    --secondary: lightgray;
-    --theme: rgb(63, 63, 63, 0.84);
+  --text: ghostwhite;
+  --primary: ghostwhite;
+  --secondary: lightgray;
+  --theme: rgb(63, 63, 63, 0.84);
 }
 
 body {
@@ -12,753 +12,777 @@ body {
 }
 
 #main {
-    height: 100vh;
-    position: relative;
-    scroll-behavior: smooth;
-    overflow: scroll;
+  height: 100vh;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 .header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
 }
 
-.header-home-title, .header-map-title {
-    font-size: 1.2rem;
-    letter-spacing: 0.6rem;
-    text-align: center;
-    flex: 2;
-    color: var(--text);
+.header-home-title,
+.header-map-title {
+  font-size: 1.2rem;
+  letter-spacing: 0.6rem;
+  text-align: center;
+  flex: 2;
+  color: var(--text);
 }
 
 .header-home-title {
-    color: transparent;
+  color: transparent;
 }
 
 .logo-title {
-    position: absolute;
-    top: 0.8rem;
-    margin: auto 0.4rem;
-    letter-spacing: 0.28rem;
+  position: absolute;
+  top: 0.8rem;
+  margin: auto 0.4rem;
+  letter-spacing: 0.28rem;
 }
 
 .header-logo {
-    position: relative;
-    text-align: left;
-    padding: 0 1rem;
+  position: relative;
+  text-align: left;
+  padding: 0 1rem;
 }
 
 .header-section {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .header-icon {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
-.header-map { 
-    background-color: var(--theme) 
+.header-map {
+  background-color: var(--theme);
 }
 
 .header-home {
-    background-color:black;
+  background-color: black;
 }
 
 .header-login-link {
-    cursor: pointer;
-    text-align: right;
-    padding: 0 1rem;
-    letter-spacing: 0.04rem;
+  cursor: pointer;
+  text-align: right;
+  padding: 0 1rem;
+  letter-spacing: 0.04rem;
 }
 
 .header-login-link:hover {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 .home {
-    letter-spacing: 0.04rem;
+  letter-spacing: 0.04rem;
 }
 
 .home-description {
-    height: 100vh;
-    background-image: linear-gradient(black, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/fultoncenter.jpg');
-    background-size: cover;
-    background-position: center center;
-    text-align: center;
+  height: 100vh;
+  background-image: linear-gradient(
+      black,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("/img/fultoncenter.jpg");
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
 }
 
 .home-description-slogan {
-    font-size: 2rem;
-    padding: 4rem 0 1rem;
+  font-size: 2rem;
+  padding: 4rem 0 1rem;
 }
 
 .home-description-slogan span {
-    padding: 0.28rem;
+  padding: 0.28rem;
 }
 
 .home-description-text {
-    padding: 0.2rem;
+  padding: 0.2rem;
 }
 
 .home-description-map {
-    padding: 1.6rem 0;
-    height: calc(100vh - 14rem);
+  padding: 1.6rem 0;
+  height: calc(100vh - 14rem);
 }
 
 .home-description-map img {
-    height: 100%;
-    padding: 0;
+  height: 100%;
+  padding: 0;
 }
 
 .home-information {
-    background-color:ghostwhite;
-    color: black;
-    text-align: center;
+  background-color: ghostwhite;
+  color: black;
+  text-align: center;
 }
 
 .home-information-top {
-    height: 20rem;
-    display: flex;
+  height: 20rem;
+  display: flex;
 }
 
 .home-information-top-box {
-    flex: 1;
-    padding: 1rem;
+  flex: 1;
+  padding: 1rem;
 }
 
 .home-information-top-icon {
-    padding: 2.8rem 0 0;
-    font-size: 2.6rem;
+  padding: 2.8rem 0 0;
+  font-size: 2.6rem;
 }
 
 .home-information-top-title {
-    font-size: 2rem;
-    padding: 1.6rem 0;
-    letter-spacing: 0.2rem;
+  font-size: 2rem;
+  padding: 1.6rem 0;
+  letter-spacing: 0.2rem;
 }
 
 .home-information-top-text {
-    padding: 0 0 0.28rem;
-    color: #525252
+  padding: 0 0 0.28rem;
+  color: #525252;
 }
 
 .home-information-bottom {
-    height: 12.8rem;
-    display: flex;
+  height: 12.8rem;
+  display: flex;
 }
 
 .home-information-bottom-box {
-    flex: 1;
-    padding: 1rem;
+  flex: 1;
+  padding: 1rem;
 }
 
 .home-information-bottom-icon {
-    font-size: 1.6rem;
-    padding: 2rem 0;
+  font-size: 1.6rem;
+  padding: 2rem 0;
 }
 
 .home-information-bottom-text {
-    color: #525252;
-    font-size: 0.8rem;
+  color: #525252;
+  font-size: 0.8rem;
 }
 
 .home-footer {
-    background-color: black;
+  background-color: black;
 }
 
 .home-footer-install {
-    display: flex;
-    padding: 2rem 0 0;
+  display: flex;
+  padding: 2rem 0 0;
 }
 
 .home-footer-install-left {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .home-footer-install-right {
-    flex: 1;
+  flex: 1;
 }
 
 .phone-icon {
-    font-size: 16rem;
+  font-size: 16rem;
 }
 
 .home-footer-install-title {
-    padding: 1rem 0 2rem;
+  padding: 1rem 0 2rem;
 }
 
 .home-footer-install-text {
-    font-size: 0.8rem;
-    line-height: 2rem;
+  font-size: 0.8rem;
+  line-height: 2rem;
 }
 
 .home-footer-bottom {
-    text-align: center;
-    height: 4rem;
-    line-height: 4rem;
-    font-size: 0.8rem;
+  text-align: center;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: 0.8rem;
 }
 
 .login {
-    position: absolute;
-    top: 3.6rem;
-    text-align: center;
-    right: 1rem;
+  position: absolute;
+  top: 3.6rem;
+  text-align: center;
+  right: 1rem;
 }
 
-.login-title { height: 2rem }
-.login-input { height: 2.6rem }
-.login-or { font-size: 0.6rem }
+.login-title {
+  height: 2rem;
+}
+.login-input {
+  height: 2.6rem;
+}
+.login-or {
+  font-size: 0.6rem;
+}
 
-.login-signup-link { 
-    font-size: 0.8rem;
-    cursor: pointer;
-    padding: 0.4rem;
-    margin: auto 2rem;
+.login-signup-link {
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.4rem;
+  margin: auto 2rem;
 }
 
 .login-signup-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .login-input.password input {
-    letter-spacing: 0.6rem;
+  letter-spacing: 0.6rem;
 }
 
 .login input {
-    background-color: transparent;
-    color: var(--text);
-    border: none;
-    border-bottom: 1px solid var(--primary);
-    text-align: left;
-    font-size: 1rem;
-    padding: 0.4rem;
-    width: 10rem;
+  background-color: transparent;
+  color: var(--text);
+  border: none;
+  border-bottom: 1px solid var(--primary);
+  text-align: left;
+  font-size: 1rem;
+  padding: 0.4rem;
+  width: 10rem;
 }
 
 .login input::-webkit-input-placeholder {
-    opacity: 0.6;
-    color: var(--text);
+  opacity: 0.6;
+  color: var(--text);
 }
 
 .login-button {
-    margin: 0.6rem auto;
-    width: 3.6rem;
-    cursor: pointer;
-    padding: 0.2rem 0.4rem;
-    border: 0.06rem solid var(--primary);
-    border-radius: 0.26rem;
-    background-color: black;
+  margin: 0.6rem auto;
+  width: 3.6rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border: 0.06rem solid var(--primary);
+  border-radius: 0.26rem;
+  background-color: black;
 }
 
 .login-button:hover {
-    border: 0.06rem solid var(--secondary);
+  border: 0.06rem solid var(--secondary);
 }
 
 .login-button-back {
-    font-size: 1.4rem;
-    cursor: pointer;
-    position: absolute;
-    top: 0.4rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0.4rem;
 }
 
 .login-error {
-    color: red;
-    font-size: 0.8rem;
+  color: red;
+  font-size: 0.8rem;
 }
 
 .map {
-    height: 100vh;
+  height: 100vh;
 }
 
 .map-google {
-    height: 100%;
+  height: 100%;
 }
 
 #mapSearchBox {
-    width: 18.5rem;
-    padding-right: 1rem;
-    margin-left: -0.16rem;
+  width: 18.5rem;
+  padding-right: 1rem;
+  margin-left: -0.16rem;
 }
 
 #mapSearchBox input {
-    height: 2rem;
-    width: 100%;
-    visibility: visible;
-    margin-top: 3.4rem;
-    text-indent: 0.4rem;
-    padding-right: 1rem;
-    border: 0.06rem solid transparent;
-    border-radius: 0.25rem;
-    box-shadow: 0 0.125rem 0.4rem rgba(0, 0, 0, 0.6);
-    text-overflow: ellipsis;
-    -webkit-appearance: none;
-    font-size: 0.8rem;
-    letter-spacing: 0.04rem;
+  height: 2rem;
+  width: 100%;
+  visibility: visible;
+  margin-top: 3.4rem;
+  text-indent: 0.4rem;
+  padding-right: 1rem;
+  border: 0.06rem solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.4rem rgba(0, 0, 0, 0.6);
+  text-overflow: ellipsis;
+  -webkit-appearance: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.04rem;
 }
 
 #mapSearchBox .clear-input {
-    font-size: 1rem;
-    position: absolute;
-    top: 4rem;
-    right: 0.125rem;
-    opacity: 0;
+  font-size: 1rem;
+  position: absolute;
+  top: 4rem;
+  right: 0.125rem;
+  opacity: 0;
 }
 
 #mapSearchBox .clear-input.active {
-    opacity: 0.3;
-    color: black;
+  opacity: 0.3;
+  color: black;
 }
 
 .set-home-popup {
-    text-align: center;
-    z-index: 2;
-    margin: 1rem -1.2rem 1rem 0;
+  text-align: center;
+  z-index: 2;
+  margin: 1rem -1.2rem 1rem 0;
 }
 
 .set-home-popup span {
-    padding: 0 0.8rem;
-    font-size: 0.8rem;
+  padding: 0 0.8rem;
+  font-size: 0.8rem;
 }
 
 .gm-style .gm-style-iw-c {
-    background-color: var(--theme);
-    padding: 0;
+  background-color: var(--theme);
+  padding: 0;
 }
 
 .gm-style .gm-style-iw-t::after {
-    background: linear-gradient(45deg, var(--theme) 50%,rgba(255,255,255,0) 56%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(
+    45deg,
+    var(--theme) 50%,
+    rgba(255, 255, 255, 0) 56%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .gm-style-iw-d {
-    overflow: hidden !important;
+  overflow: hidden !important;
 }
 
 .infoWindow {
-    font-size: 0.8rem;
-    font-weight: 400;
-    text-align: center;
-    color: var(--text);
-    padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--text);
+  padding: 1rem;
 }
 
 .infoWindow-name {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 0.06rem solid var(--secondary);
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 0.06rem solid var(--secondary);
 }
 
 .infoWindow-address {
-    padding: 0.1rem 0;
+  padding: 0.1rem 0;
 }
 
 .infoWindow-button-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .infoWindow-button {
-    padding: 0.2rem 0.4rem;
-    margin: 0 0.4rem;
-    border: 0.06rem solid black;
-    border-radius: 0.26rem;
-    color: black;
+  padding: 0.2rem 0.4rem;
+  margin: 0 0.4rem;
+  border: 0.06rem solid black;
+  border-radius: 0.26rem;
+  color: black;
 }
 
-.infoWindow-button.experiences { 
-    background-color: #00bcd4;
-    cursor: pointer;
+.infoWindow-button.experiences {
+  background-color: #00bcd4;
+  cursor: pointer;
 }
 
 .infoWindow-button.experiences:hover {
-    background-color: #00bcd4d1;
+  background-color: #00bcd4d1;
 }
 
-.infoWindow-button.wishlist { 
-    background-color: palevioletred;
-    cursor: pointer;
+.infoWindow-button.wishlist {
+  background-color: palevioletred;
+  cursor: pointer;
 }
 
-.infoWindow-button.wishlist:hover { 
-    background-color: #db7093db;
+.infoWindow-button.wishlist:hover {
+  background-color: #db7093db;
 }
 
-.infoWindow-button.user-home { 
-    background-color: var(--secondary);
-    margin: 0.4rem auto 0;
-    width: 6rem;
+.infoWindow-button.user-home {
+  background-color: var(--secondary);
+  margin: 0.4rem auto 0;
+  width: 6rem;
 }
 
 .infoWindow-button.user-home.set-home-active:hover {
-    background-color: silver;
-    cursor: pointer;
+  background-color: silver;
+  cursor: pointer;
 }
 
 .infoWindow-date-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4rem;
 }
 
 .infoWindow-date {
-    font-size: 0.68rem;
+  font-size: 0.68rem;
 }
 
 .datepicker {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0.8rem auto;
-    width: 10.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.8rem auto;
+  width: 10.8rem;
 }
 
 .datepicker input {
-    border: 0.06rem solid var(--secondary);
-    width: 2.6rem;
-    padding: 0.2rem;
-    text-align: center;
+  border: 0.06rem solid var(--secondary);
+  width: 2.6rem;
+  padding: 0.2rem;
+  text-align: center;
 }
 
 .datepicker input::-webkit-inner-spin-button {
-    display: none;
+  display: none;
 }
 
 .datepicker-error {
-    color: red;
-    font-size: .68rem;
-    margin-bottom: 0.8rem;
+  color: red;
+  font-size: 0.68rem;
+  margin-bottom: 0.8rem;
 }
 
 .footer {
-    background-color: var(--theme);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 2;
-    display: flex;
-    height: 3rem;
+  background-color: var(--theme);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  height: 3rem;
 }
 
 .footer-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
 }
 
 .footer-label {
-    font-size: 0.8rem;
-    padding-top: 0.125rem;
-    letter-spacing: 0.125rem;
+  font-size: 0.8rem;
+  padding-top: 0.125rem;
+  letter-spacing: 0.125rem;
 }
 
 .drawer {
-    position: absolute;
-    box-sizing: border-box;
-    z-index: 2;
-    width: 8.8rem;
-    top: 3.4rem;
-    bottom: 3.4rem;
-    left: 0.3rem;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 2;
+  width: 8.8rem;
+  top: 3.4rem;
+  bottom: 3.4rem;
+  left: 0.3rem;
 }
 
 .drawer-name {
-    padding-bottom: 0.32rem;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-weight: bold;
+  padding-bottom: 0.32rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: bold;
 }
 
 .drawer-email {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-size: 0.82rem;
-    font-style: italic;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.82rem;
+  font-style: italic;
 }
 
 .drawer-section {
-    padding: 1rem 0;
-    border-top: 0.06rem solid var(--secondary);
+  padding: 1rem 0;
+  border-top: 0.06rem solid var(--secondary);
 }
 
 .drawer-section.top {
-    border: none
+  border: none;
 }
 
 .drawer-link {
-    font-size: 0.72rem;
-    padding-top: 0.6rem;
+  font-size: 0.72rem;
+  padding-top: 0.6rem;
 }
 
 .drawer-link span {
-    margin-left: 0.4rem;
-    color: red;
+  margin-left: 0.4rem;
+  color: red;
 }
 
 .drawer-copyright {
-    font-size: 0.6rem;
-    font-style: italic;
-    position: absolute;
-    bottom: 0.2rem;
-    left: 1.62rem;
+  font-size: 0.6rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 0.2rem;
+  left: 1.62rem;
 }
 
 .panel {
-    position: absolute;
-    top: 6rem;
-    right: 1.8rem;
-    left: 2rem;
-    height: calc(100% - 10.68rem);
-    overflow: scroll;
-    z-index: 3;
+  position: absolute;
+  top: 6rem;
+  right: 1.8rem;
+  left: 2rem;
+  height: calc(100% - 10.68rem);
+  overflow: scroll;
+  z-index: 3;
 }
 
 .panel::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .panel-title {
-    text-align: center;
-    border-bottom: 0.06rem solid var(--secondary);
-    padding: 0.2rem 0 0.8rem;
-    margin-bottom: 0.8rem;
-    letter-spacing: 0.2rem;
+  text-align: center;
+  border-bottom: 0.06rem solid var(--secondary);
+  padding: 0.2rem 0 0.8rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.2rem;
 }
 
 .list-line {
-    font-size: 0.68rem;
-    margin: 0.4rem 0;
-    padding: 0.2rem;
-    display: flex;
-    border-radius: 0.26rem;
+  font-size: 0.68rem;
+  margin: 0.4rem 0;
+  padding: 0.2rem;
+  display: flex;
+  border-radius: 0.26rem;
 }
 
-.list-line.experiences { background-color: #00bcd480 }
-.list-line.wishlist { background-color: #db709396 }
+.list-line.experiences {
+  background-color: #00bcd480;
+}
+.list-line.wishlist {
+  background-color: #db709396;
+}
 
 .list-column {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .list-column.name {
-    flex: 6;
+  flex: 6;
 }
 
 .list-column.city {
-    flex: 2;
-    margin: 0 0.4rem;
+  flex: 2;
+  margin: 0 0.4rem;
 }
 
 .list-column.date {
-    flex: 2;
-    text-align: center;
+  flex: 2;
+  text-align: center;
 }
 
 .weather-top {
-    text-align: center;
-    position: relative;
+  text-align: center;
+  position: relative;
 }
 
 .weather-temperature {
-    position: absolute;
-    left: 1rem;
-    top: 0.24rem;
+  position: absolute;
+  left: 1rem;
+  top: 0.24rem;
 }
 
 .weather-input {
-    margin: 0 auto;
-    position: relative;
-    width: 10rem;
+  margin: 0 auto;
+  position: relative;
+  width: 10rem;
 }
 
 .weather-input input {
-    text-overflow: ellipsis;
-    letter-spacing: 0.04rem;
-    border-radius: 0.25rem;
-    padding: 0.26rem;
-    font-size: 0.8rem;
-    border: 0.06rem solid transparent;
+  text-overflow: ellipsis;
+  letter-spacing: 0.04rem;
+  border-radius: 0.25rem;
+  padding: 0.26rem;
+  font-size: 0.8rem;
+  border: 0.06rem solid transparent;
 }
 
 .weather-icon-add {
-    position: absolute;
-    top: 0.24rem;
-    right: -2rem;
-    font-size: 1.2rem;
-    cursor: pointer;
+  position: absolute;
+  top: 0.24rem;
+  right: -2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .weather-error {
-    font-size: 0.8rem;
-    text-align: center;
-    color: red;
-    position: absolute;
-    width: calc(100% - 1.2rem);
-    padding: 0.4rem 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+  color: red;
+  position: absolute;
+  width: calc(100% - 1.2rem);
+  padding: 0.4rem 0 0;
 }
 
 .weather-row {
-    display: flex;
-    height: 6rem;
-    line-height: 6rem;
+  display: flex;
+  height: 6rem;
+  line-height: 6rem;
 }
 
 .weather-column {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .weather-icon {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 
 .weather-icon-trash {
-    font-size: 0.6rem;
+  font-size: 0.6rem;
 }
 
 .loading {
-    margin: 0;
-    padding: 0;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .circle {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.circle:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #333, 0 0 0 20px #444, 0 0 0 30px #555, 0 0 0 40px #666,
+    0 0 0 50px #777, inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.dots {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  animation: animate 10s linear infinite;
+}
+
+.dots:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  left: calc(50% - 5px);
+  top: 0;
+  box-shadow: 50px 0 0 rgb(0, 188, 212), -65px -50px 0 palevioletred,
+    -65px 50px 0 rgb(0, 188, 212), -55px 0 0 palevioletred,
+    45px 35px 0 rgb(0, 188, 212), -40px -40px 0 palevioletred, 40px -40px 0 #fff,
+    55px -59px 0 #fff;
+  animation: animate 10s linear infinite;
+}
+
+.dots:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  left: calc(50% - 5px);
+  bottom: 0;
+  box-shadow: -50px 0 0 palevioletred, 65px 50px 0 rgb(0, 188, 212),
+    65px -50px 0 palevioletred, 55px 0 0 rgb(0, 188, 212),
+    -45px -35px 0 palevioletred, 40px 40px 0 rgb(0, 188, 212), -40px 40px 0 #fff,
+    -55px 59px 0 #fff;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .circle:before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px #333, 0 0 0 20px #444, 0 0 0 30px #555, 0 0 0 40px #666,
-      0 0 0 50px #777, inset 0 0 40px rgba(0, 0, 0, 0.5);
+  100% {
+    transform: rotate(1800deg);
   }
-  
-  .dots {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 50%;
-    animation: animate 10s linear infinite;
-  }
-  
-  .dots:before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    border-radius: 50%;
-    left: calc(50% - 5px);
-    top: 0;
-    box-shadow: 50px 0 0 rgb(0, 188, 212), -65px -50px 0 palevioletred, -65px 50px 0 rgb(0, 188, 212),
-      -55px 0 0 palevioletred, 45px 35px 0 rgb(0, 188, 212), -40px -40px 0 palevioletred,
-      40px -40px 0 #fff, 55px -59px 0 #fff;
-    animation: animate 10s linear infinite;
-  }
-  
-  .dots:after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #fff;
-    border-radius: 50%;
-    left: calc(50% - 5px);
-    bottom: 0;
-    box-shadow: -50px 0 0 palevioletred, 65px 50px 0 rgb(0, 188, 212), 65px -50px 0 palevioletred,
-      55px 0 0 rgb(0, 188, 212), -45px -35px 0 palevioletred, 40px 40px 0 rgb(0, 188, 212),
-      -40px 40px 0 #fff, -55px 59px 0 #fff;
-    animation: animate 10s linear infinite;
-  }
-  
-  @keyframes animate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(1800deg);
-    }
-  }
+}
 
 .card {
-    background-color: var(--theme);
-    border: 0.06rem solid var(--primary);
-    box-shadow: 0.08rem 0.08rem 0.6rem 0.06rem black;
-    padding: 0.6rem;
-    border-radius: 0.4rem;
+  background-color: var(--theme);
+  border: 0.06rem solid var(--primary);
+  box-shadow: 0.08rem 0.08rem 0.6rem 0.06rem black;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
 }
 
 .plain-link:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .color-link:hover {
-    cursor: pointer;
-    color: #c4d7e6;
+  cursor: pointer;
+  color: #c4d7e6;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 @media only screen and (max-width: 768px) {
-    .header-home-title {
-        color: var(--text);
-    }
+  .header-home-title {
+    color: var(--text);
+  }
 
-    .logo-title {
-        color: transparent;
-    }
+  .logo-title {
+    color: transparent;
+  }
 
-    .home-description-slogan {
-        font-size: 1rem;
-    }
+  .home-description-slogan {
+    font-size: 1rem;
+  }
 
-    .home-description-content {
-        font-size: 0.8rem;
-    }
+  .home-description-content {
+    font-size: 0.8rem;
+  }
 
-    .home-information-top, .home-information-bottom {
-        height: auto;
-        display: block;
-    }
+  .home-information-top,
+  .home-information-bottom {
+    height: auto;
+    display: block;
+  }
 
-    .home-information-bottom {
-        padding: 0 0 2rem;
-    }
+  .home-information-bottom {
+    padding: 0 0 2rem;
+  }
 
-    .home-footer-install {
-        display: block;
-    }
+  .home-footer-install {
+    display: block;
+  }
 
-    .home-footer-install-right {
-        width: 18rem;
-        margin: 2rem auto;
-    }
+  .home-footer-install-right {
+    width: 18rem;
+    margin: 2rem auto;
+  }
 }
