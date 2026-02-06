@@ -18,18 +18,13 @@ iDestination is a travel planning single-page application which allows users to 
 Front End
 * React
 * Redux
+* Webpack
 * CSS
-* HTML
 
 Back End
 * Firebase
 * Google Maps API
 * Open Weather API
-
-
-Other
-* Node.js
-* Git
 
 ## :iphone: Add To Your iPhone
 * Open Safari
@@ -40,3 +35,6 @@ Other
 
 ## :rocket: Deployment
 https://idestination.web.app/
+
+## Notes
+* Using Webpack 4 with Node 15. Any upgrades to Webpack and Node will break unless the whole app is migrated to the latest Google Maps API, Firebase and functional React components.
