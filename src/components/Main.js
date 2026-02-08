@@ -1,6 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Header, Footer, Map, Home, Drawer, List, Weather } from "./Index";
+import Header from "./Header";
+import Footer from "./Footer";
+import Map from "./Map";
+import Home from "./Home";
+import Drawer from "./Drawer";
+import List from "./List";
+import Weather from "./Weather";
 import { login, logout } from "../store";
 
 class Main extends React.Component {
@@ -24,7 +30,7 @@ class Main extends React.Component {
 
   load() {
     new Promise((resolve) => setTimeout(resolve, 1200)).then(() =>
-      this.setState({ loading: false })
+      this.setState({ loading: false }),
     );
   }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { colors } from "./Index";
+import { colors } from "../constants";
 import { MdStar, GiFire } from "../icons";
 import { toggleListExperiences, toggleListWishlist } from "../store";
 

@@ -28,12 +28,15 @@ export {
   MdStar,
   MdArrowBack,
   MdAddLocation,
+
   // Game Icons
   GiFire,
+
   // Font Awesome
   FaSearch,
   FaMap,
   FaTrash,
+
   // Ionicons
   IoMdPerson,
   IoMdHome,
@@ -43,6 +46,7 @@ export {
   IoMdCloseCircle,
   IoMdArrowRoundUp,
   IoIosAddCircleOutline,
+  
   // Weather Icons
   WiDaySunny,
   WiDayCloudy,

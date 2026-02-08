@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { closeLogIn } from "../store";
-import { colors } from "./Index";
+import { colors } from "../constants";
 import {
   GiFire,
   MdStar,
