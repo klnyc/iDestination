@@ -2,6 +2,8 @@
 
 iDestination is a travel planning single-page application which allows users to keep track of places that they have traveled to in the past and places that they plan to visit in the future. Users can search, add, and filter locations on an integrated map and view real-time weather of any city.
 
+https://idestination.web.app/
+
 ## :gear: Functionality
 * Optimized for iPhone and desktop
 * Login or sign up with your email
@@ -33,8 +35,6 @@ Back End
 * Click "Add to Home Screen"
 * Open iDestination from your home screen
 
-## :rocket: Deployment
-https://idestination.web.app/
-
-## Notes
+## :notebook_with_decorative_cover: Notes
 * Using Webpack 4 with Node 15. Any upgrades to Webpack and Node will break unless the whole app is migrated to the latest Google Maps API, Firebase and functional React components.
+* `firebase` variable is defined globally by the Firebase scripts in `index.html`

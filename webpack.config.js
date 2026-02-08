@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './client/app',
+    entry: './src/app',
     mode: 'development',
     output: {
       path: __dirname,

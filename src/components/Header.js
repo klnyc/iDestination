@@ -31,7 +31,7 @@ class Header extends React.Component {
       <div className="header header-home">
         <div className="header-section">
           <div className="header-logo">
-            <img src="img/logo.png" width="40" height="40" />
+            <img src="assets/logo.png" width="40" height="40" />
             <span className="logo-title">iDestination</span>
           </div>
         </div>

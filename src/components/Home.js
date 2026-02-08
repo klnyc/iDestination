@@ -34,7 +34,7 @@ class Home extends React.Component {
             </div>
           </div>
           <div className="home-description-map">
-            <img src="img/screenshot.png" className="card"></img>
+            <img src="assets/screenshot.png" className="card"></img>
           </div>
         </div>
 
