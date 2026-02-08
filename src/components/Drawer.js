@@ -68,17 +68,17 @@ class Drawer extends Header {
               this.goHome();
             }}
           >
-            Set Home
+            Set home
           </div>
           <div
             className="drawer-link color-link"
             onClick={() => firebase.auth().signOut()}
           >
-            Sign Out
+            Sign out
           </div>
         </div>
 
-        <div className="drawer-copyright">© 2020 iDestination</div>
+        <div className="drawer-copyright">© 2026 iDestination</div>
       </div>
     );
   }

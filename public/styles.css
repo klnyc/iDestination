@@ -15,7 +15,7 @@ body {
   height: 100vh;
   position: relative;
   scroll-behavior: smooth;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .header {
@@ -89,11 +89,8 @@ body {
 
 .home-description {
   height: 100vh;
-  background-image: linear-gradient(
-      black,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
+  background-image:
+    linear-gradient(black, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("/assets/fultoncenter.jpg");
   background-size: cover;
   background-position: center center;
@@ -339,6 +336,18 @@ body {
 .set-home-popup span {
   padding: 0 0.8rem;
   font-size: 0.8rem;
+}
+
+.set-home-popup-close-button {
+  position: absolute;
+  bottom: -10px;
+  right: 140px;
+  color: black;
+  border: 0.06rem solid var(--primary);
+  box-shadow: 0.08rem 0.08rem 0.6rem 0.06rem black;
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .gm-style .gm-style-iw-c {
@@ -678,8 +687,13 @@ body {
   right: 20px;
   bottom: 20px;
   border-radius: 50%;
-  box-shadow: 0 0 0 10px #333, 0 0 0 20px #444, 0 0 0 30px #555, 0 0 0 40px #666,
-    0 0 0 50px #777, inset 0 0 40px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 0 10px #333,
+    0 0 0 20px #444,
+    0 0 0 30px #555,
+    0 0 0 40px #666,
+    0 0 0 50px #777,
+    inset 0 0 40px rgba(0, 0, 0, 0.5);
 }
 
 .dots {
@@ -701,9 +715,14 @@ body {
   border-radius: 50%;
   left: calc(50% - 5px);
   top: 0;
-  box-shadow: 50px 0 0 rgb(0, 188, 212), -65px -50px 0 palevioletred,
-    -65px 50px 0 rgb(0, 188, 212), -55px 0 0 palevioletred,
-    45px 35px 0 rgb(0, 188, 212), -40px -40px 0 palevioletred, 40px -40px 0 #fff,
+  box-shadow:
+    50px 0 0 rgb(0, 188, 212),
+    -65px -50px 0 palevioletred,
+    -65px 50px 0 rgb(0, 188, 212),
+    -55px 0 0 palevioletred,
+    45px 35px 0 rgb(0, 188, 212),
+    -40px -40px 0 palevioletred,
+    40px -40px 0 #fff,
     55px -59px 0 #fff;
   animation: animate 10s linear infinite;
 }
@@ -717,9 +736,14 @@ body {
   border-radius: 50%;
   left: calc(50% - 5px);
   bottom: 0;
-  box-shadow: -50px 0 0 palevioletred, 65px 50px 0 rgb(0, 188, 212),
-    65px -50px 0 palevioletred, 55px 0 0 rgb(0, 188, 212),
-    -45px -35px 0 palevioletred, 40px 40px 0 rgb(0, 188, 212), -40px 40px 0 #fff,
+  box-shadow:
+    -50px 0 0 palevioletred,
+    65px 50px 0 rgb(0, 188, 212),
+    65px -50px 0 palevioletred,
+    55px 0 0 rgb(0, 188, 212),
+    -45px -35px 0 palevioletred,
+    40px 40px 0 rgb(0, 188, 212),
+    -40px 40px 0 #fff,
     -55px 59px 0 #fff;
   animation: animate 10s linear infinite;
 }

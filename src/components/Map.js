@@ -32,6 +32,8 @@ class Map extends React.Component {
       infoWindow,
       toggleOffFeatures,
       home,
+      toggleHome,
+      closeInfoWindow,
     } = this.props;
 
     return (
@@ -70,15 +72,25 @@ class Map extends React.Component {
             >
               <IoMdCloseCircle />
             </div>
+
             {home && !mapSearchInput && (
               <div className="set-home-popup card">
                 <span>
                   <IoMdArrowRoundUp />
                 </span>
-                Enter New Home Address
+                Enter new home address
                 <span>
                   <IoMdArrowRoundUp />
                 </span>
+                <button
+                  className="set-home-popup-close-button"
+                  onClick={() => {
+                    toggleHome();
+                    closeInfoWindow();
+                  }}
+                >
+                  X
+                </button>
               </div>
             )}
           </div>
@@ -136,9 +148,11 @@ const mapDispatch = (dispatch) => ({
   clearCurrentMarker: () => dispatch(actions.clearCurrentMarker()),
   renderMarkers: (id) => dispatch(actions.renderMarkers(id)),
   toggleOffFeatures: () => dispatch(actions.toggleOffFeatures()),
+  toggleHome: () => dispatch(actions.toggleHome()),
+  closeInfoWindow: () => dispatch(actions.closeInfoWindow()),
 });
 
 export default connect(
   mapState,
-  mapDispatch
+  mapDispatch,
 )(compose(withProps(mapProperties), withScriptjs, withGoogleMap)(Map));

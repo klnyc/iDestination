@@ -150,7 +150,7 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <div className="home-footer-bottom">© 2020 iDestination</div>
+          <div className="home-footer-bottom">© 2026 iDestination</div>
         </div>
       </div>
     );
