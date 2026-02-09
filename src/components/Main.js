@@ -29,7 +29,7 @@ class Main extends React.Component {
   }
 
   load() {
-    new Promise((resolve) => setTimeout(resolve, 1200)).then(() =>
+    new Promise((resolve) => setTimeout(resolve, 600)).then(() =>
       this.setState({ loading: false }),
     );
   }

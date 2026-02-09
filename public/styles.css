@@ -356,12 +356,12 @@ body {
 }
 
 .gm-style-iw-chr {
-  height: 18px;
+  height: 0px;
 }
 
-.gm-style .gm-style-iw-t::after {
+.gm-style .gm-style-iw-tc::after {
   background: linear-gradient(
-    45deg,
+    135deg,
     var(--theme) 50%,
     rgba(255, 255, 255, 0) 56%,
     rgba(255, 255, 255, 0) 100%
@@ -383,7 +383,7 @@ body {
 .infoWindow-name {
   font-size: 1rem;
   margin-bottom: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding: 0 22px 0.4rem;
   border-bottom: 0.06rem solid var(--secondary);
 }
 
