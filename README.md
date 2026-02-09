@@ -38,3 +38,4 @@ Back End
 ## :notebook_with_decorative_cover: Notes
 * Using Webpack 4 with Node 15. Any upgrades to Webpack and Node will break unless the whole app is migrated to the latest Google Maps API, Firebase and functional React components.
 * `firebase` variable is defined globally by the Firebase scripts in `index.html`
+* Running `webpack-dev-server` rebuilds automatically on every save. Run `firebase deploy` to deploy the current build.
